@@ -1,0 +1,24 @@
+ALGORITHM Checkpoint_Algo
+VAR
+    c : CHAR;
+    n_char, n_wor, n_vow : INTEGER;
+BEGIN
+    n_char:=0;
+    n_vow:=0;
+    n_wor:=0;
+    write("Entrer le caractère :" );
+    read(c);
+    WHILE (c<>".") DO
+        n_char+=1
+        IF (c in ["a", "e", "i", "o", "u", "y"]) THEN
+            n_vow+=1;
+        END_IF
+        IF (c=" ") THEN
+            n_wor +=1;
+        END_IF
+        read(c);
+    END_WHILE
+    write("The length of your sentence is :", n_char);
+    write("The number of words is : ", n_wor);
+    write("The number of vowels is : ", n_vow);
+END
